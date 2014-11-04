@@ -15,11 +15,39 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.firststvc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
+    self.navigation = [[UINavigationController alloc]initWithRootViewController:self.firststvc];
+    self.window.rootViewController = self.navigation;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
+    
 }
 
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//    
+//}
+//-(NSUInteger)supportedInterfaceOrientations
+//{
+//    
+//    return UIInterfaceOrientationMaskLandscape;
+//}
+//
+//
+//-(BOOL)shouldAutorotate
+//{
+//    return NO;
+//}
+
+//-(NSUInteger)supportedInterfaceOrientations
+//{
+//    return UIInterfaceOrientationMaskPortrait;
+//}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

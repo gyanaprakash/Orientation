@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ThirdViewController.h
 //  Orientation
 //
 //  Created by Bsetecip10 on 30/10/14.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ThirdViewController : UIViewController
 
+- (IBAction)back:(UIButton *)sender;
 - (IBAction)next:(UIButton *)sender;
 
 @end
-

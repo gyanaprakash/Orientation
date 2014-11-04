@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FourthViewController.h
 //  Orientation
 //
 //  Created by Bsetecip10 on 30/10/14.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-- (IBAction)next:(UIButton *)sender;
+@interface FourthViewController : UIViewController
+- (IBAction)back:(UIButton *)sender;
 
 @end
-
